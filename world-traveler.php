@@ -20,5 +20,8 @@ echo "Starting Amount\nRiel:$riel\nKyat:$kyat \nKrones:$krones\nLek:$lek";
 
 echo "\n\nAfter Exchanging\nRiel to USD:". $riel_to_usd * $riel . "\nKyat to USD:" . $kyat_to_usd * $kyat . "\nKrones to USD:" . $krones_to_usd * $krones . "\nLek to USD:" . $lek_to_usd * $lek;
 
-$final_amount = $riel_to_usd + $kyat_to_usd + $krones_to_usd + $lek_to_usd - 4;
-echo "\n\nAfter deducting the transactions fees:\nYou'll be recieving $final_amount USD.";
+$final_amount = ($riel_to_usd*$riel) + ($kyat_to_usd*$kyat) + ($krones_to_usd*$krones) + ($lek_to_usd*$lek) - 4;
+echo "\n\nAfter deducting the transactions fees:\nYou'll be receiving $final_amount USD.";
+
+echo "\n\nRounded Up\nUSD";
+echo round($final_amount,2);
